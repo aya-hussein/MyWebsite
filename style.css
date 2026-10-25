@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Faustina:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Cairo";
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.nav{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav h1{
+    margin-right: 50px;
+}
+.nav h1 span{
+    color: #e5b219
+}
+.nav ul{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.nav ul li{
+    margin-left: 50px;
+    list-style: none;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: white;
+    transition: 0.4s;
+    font-size: 20px;
+}
+.nav ul li a:hover{
+    color: #e5b219;
+}
+
+/* Start Hero section */
+.hero{
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 8%;
+    color: white;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(rgb(169 169 169 / 85%), rgb(0 0 0 / 85%));
+}
+.hero::after{
+    content: "";
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url('imgs/pic.jpg');
+    background-size: cover;
+    background-position: top center;
+    position: absolute;
+    z-index: -1;
+}
+.hero .hero-content{
+    max-width: 750px;
+}
+.hero .hero-content .small-title{
+    font-size: 25px;
+    color: #e5b219;
+}
+.hero .hero-content h1{
+    font-size: 50px;
+    margin: 20px 0;
+}
+.hero .hero-content p{
+    color: #ccc;
+    font-size: 19px;
+    margin-bottom: 40px;
+}
+.hero .hero-content .main-btn{
+    padding: 9px 35px;
+    border-radius: 5px;
+    transition: 0.4s;
+    background-color: #e5b219;
+    border: 1px solid #e5b219;
+    color: #000;
+    font-weight: bold;
+}
+.hero .hero-content .main-btn:hover{
+    background: transparent;
+    color: #fff;
+}
+.hero .hero-content .main-btn i{
+    margin-right: 5px;
+}
+/* End Hero section */
+
+/* Start About , Services*/
+.about,.services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 25px;
+}
+.main-services{
+    background-color: #f3f3f3;
+    padding: 30px 0;
+}
+.card{
+    width: 25%;
+    height: 200px;
+    border: 1px solid rgb(239 233 233);
+    box-shadow: 3px 3px 15px #b3b3b3;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: 0.4s;
+    background-color: #fff;
+}
+.card:hover{
+    transform: translateY(-15px);
+}
+.card i{
+    color: #e5b219;
+    font-size: 40px;
+    font-weight: 100;
+}
+.card p{
+    color: #7d7d7d;
+    font-size: 18px;
+}
+/* End About , Services*/
+
+/* Start Contact */
+.c-header1{
+    text-align: center;
+    font-size: 20px;
+    color: #e5b219;
+    margin-top: 80px;
+}
+.c-header2{
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 30px;
+}
+.c-header2::after {
+    content: "";
+    position: absolute;
+    bottom: -26px;
+    right: 48%;
+    height: 0.5em;
+    border-top: 3px solid #e5b219;
+    z-index: 1;
+    width: 62px;
+}
+.contact{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding: 10px 25px 40px 25px;
+}
+.contact .form{
+    width: 40%;
+    margin: 0 20px;
+    box-shadow: 3px 3px 15px #b5b1b1;
+    padding: 30px;
+}
+.contact .form form{
+    display: flex;
+    flex-direction: column;
+}
+.contact .form form h1{
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.contact .form form label{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.contact .form form .name{
+    padding: 7px 0;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid rgb(206, 200, 200);
+    outline: none;
+    padding: 8px;
+}
+.contact .form form .name:focus{
+    border: 1px solid #e5b219;
+}
+.contact .form form .btn{
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    padding: 10px 0;
+    border-radius: 8px;
+    transition: 0.4s;
+    font-size: 18px;
+}
+.contact .form form .btn:hover{
+    background: transparent;
+    outline: none;
+    color: black;
+}
+.contact .form form #c-message{
+    resize: vertical;
+}
+.contact .form form .btn i{
+    margin-right: 5px;
+}
+.contact .map{
+    width: 40%;
+}
+.contact .map iframe{
+    width: 100%;
+    height: 100%;
+}
+/* End Contact */
+
+/* Start Footer */
+.footer{
+    background-color: #000;
+    text-align: center;
+    color: #c9c9c9;
+    padding: 30px 0;
+    font-size: 17px;
+}
+.footer .f-title{
+    color: #fff;
+}
+
+/* End Footer */
+
+@media (max-width:766px){
+    .nav{
+        flex-direction: column;
+    }
+    .nav h1{
+        margin: auto;
+    }
+    .nav ul{
+        gap: 20px;
+    }
+    .nav ul li{
+        margin: auto;
+    }
+    .nav ul li a{
+        font-size: 15px;
+    }
+    .hero .hero-content h1{
+        font-size: 40px;
+    }
+    .hero .hero-content p{
+        font-size: 15px;
+    }
+    .hero .hero-content .main-btn{
+        padding: 9px 20px;
+    }
+    .about, .services{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .card{
+        width: 70%;
+        height: auto;
+    }
+    .c-header2::after{
+        right: 46%;
+    }
+    .contact{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .contact .form,
+    .contact .map{
+        width: 95%;
+    }
+    .contact .map{
+        height: 400px;
+    }
+}
